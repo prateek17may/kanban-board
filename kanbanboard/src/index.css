@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 10px;
+  background: #f4f4f4;
+}
+
+.dark {
+  background: #121212;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.board {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.column {
+  min-width: 280px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dark .column {
+  background: #1e1e1e;
+}
+
+.task {
+  background: #eaeaea;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark .task {
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.dark .modal {
+  background: #1e1e1e;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions .cancel {
+  background: #888;
+  color: white;
+}
